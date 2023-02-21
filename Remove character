@@ -1,0 +1,16 @@
+string removeChars(string string1, string string2) {
+        unordered_map<char,int> m;
+        string s="";
+        for(int i=0;i<string2.size();i++)
+        {
+            m[string2[i]]++;
+        }
+        for(int i=0;i<string1.size();i++)
+        {
+            if(m.find(string1[i])==m.end())
+            {
+                s=s+string1[i];
+            }
+        }
+        return s;
+    }
