@@ -1,0 +1,17 @@
+       int RedOrGreen(int N,string S) {
+         int green=0;
+         int red=0;
+         for(int i=0;i<N;i++)
+         {
+             if(S[i]=='G')
+             {
+                 green++;
+             }
+             else
+             {
+                 red++;
+             }
+         }
+         int min_element=min(green,red);
+         return min_element;
+    }
