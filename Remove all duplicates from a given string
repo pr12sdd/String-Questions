@@ -1,0 +1,26 @@
+string removeDuplicates(string str) {
+	   unordered_map<char,int> m;
+	   for(auto x:str)
+	   {
+	       m[x]++;
+	   }
+	   string s="";
+	   for(auto x:str)
+	   {
+	       if(m.find(x)!=m.end())
+	       {
+	           auto temp=m.find(x);
+	           if(temp->second==1)
+	           {
+	               s=s+temp->first;
+	           }
+	           else
+	           {
+	               s=s+temp->first;
+	               m.erase(temp->first);
+	           }
+	       }
+	   }
+	   return s;
+	    
+	}
