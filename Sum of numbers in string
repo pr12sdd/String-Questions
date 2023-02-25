@@ -1,0 +1,19 @@
+int findSum(string str)
+    {
+    	int num=0;
+    	int sum=0;
+    	for(int i=0;i<str.size();i++)
+    	{
+    	    if(str[i]>='0' && str[i]<='9')
+    	    {
+    	        num=num*10+(int)(str[i]-'0');
+    	    }
+    	    else
+    	    {
+    	        sum=sum+num;
+    	        num=0;
+    	    }
+    	}
+    	return sum+num;
+    	
+    }
