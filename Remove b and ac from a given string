@@ -1,0 +1,25 @@
+string stringFilter(string str) 
+    {   
+        string n="";
+        int i=0;
+        while(i<str.size())
+        {   string s="";
+            s=s+str[i];
+            s=s+str[i+1];
+            //cout<<s<<endl;
+            if(str[i]=='b')
+            {
+                i=i+1;
+            }
+            else if(s=="ac")
+            {
+                i=i+2;
+            }
+            else
+            {
+                n=n+str[i];
+                i++;
+            }
+        }
+        return n;
+    } 
