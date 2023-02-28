@@ -1,0 +1,40 @@
+void rotate_string(string &s,int low,int high)
+    {
+        for(int i=low,j=high;i<j;i++,j--)
+        {
+            swap(s[i],s[j]);
+        }
+    }
+    bool isRotated(string str1, string str2)
+    {    
+        if(str1.size()!=str2.size())
+        {
+            return false;
+        }
+        //clock wise rotation.
+        string temp=str1;
+        rotate_string(temp,0,1);
+        rotate_string(temp,2,temp.size()-1);
+        rotate_string(temp,0,temp.size()-1);
+        //cout<<str1<<endl;
+        if(temp==str2)
+        {
+            return true;
+        }
+        else
+        {
+            string temp1=str1;
+        rotate_string(temp1,0,temp1.size()-3);
+        rotate_string(temp1,temp1.size()-2,temp1.size()-1);
+        rotate_string(temp1,0,temp1.size()-1);
+        if(temp1==str2)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+        }
+    }
